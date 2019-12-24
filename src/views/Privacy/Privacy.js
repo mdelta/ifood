@@ -5,14 +5,9 @@ import classNames from "classnames";
 import Link from '@material-ui/core/Link';
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardFooter from "components/Card/CardFooter.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-import image from "assets/img/bg7.jpg";
 import profile from "assets/img/question_field.png";
 const useStyles = makeStyles(styles);
 

@@ -49,14 +49,16 @@ const ifoodReducer = (state, { type, payload }) => {
 export function useIfoodRestaurants(userId) {
   //
   const [state, dispatch] = React.useReducer(ifoodReducer, { ifoods: [] });
+
   // Ifood Actions
   const loadIfoods = async () => {
     const ifoods = await restaurants.find({}, { limit: 1000 }).asArray();
     dispatch({ type: "setIfoods", payload: { ifoods } });
   };
+
   const useWatchRestaurants = () => {
-    const [getStream, closeStream] = watchRestaurants();
     React.useEffect(() => {
+      const [getStream, closeStream] = watchRestaurants();
       getStream().then(stream => stream.onNext( (changeEvent) => {
         switch(changeEvent.operationType) {
           case "insert": {
@@ -71,16 +73,21 @@ export function useIfoodRestaurants(userId) {
             dispatch({ type: "updateIfood", payload: changeEvent.fullDocument});
             break;
           }
+          default: {
+            console.error("Received invalid ifood action type:" + changeEvent.operationType);
+          }
         }
       } ));
       return closeStream;
     }, [])
   };
+
   const addIfood = async task => {
     const ifood = { task, owner_id: userId };
     const result = await restaurants.insertOne(ifood);
-    //dispatch({ type: "addIfood", payload: { ...ifood, _id: result.insertedId } });
+    dispatch({ type: "addIfood", payload: { ...ifood, _id: result.insertedId } });
   };
+
   const removeIfood = async ifoodId => {
     await restaurants.deleteOne({ _id: ifoodId });
     //dispatch({ type: "removeIfood", payload: { id: ifoodId } });
@@ -90,7 +97,9 @@ export function useIfoodRestaurants(userId) {
     loadIfoods();
     
   }, []);
+
   useWatchRestaurants();
+
   return {
     restaurants: state.ifoods,
     hasHadIfoods: state.hasHadIfoods,

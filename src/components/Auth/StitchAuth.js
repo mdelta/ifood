@@ -92,6 +92,8 @@ export function StitchAuthProvider(props) {
       };
       return value;
     },
+     // TODO
+     // eslint-disable-next-line react-hooks/exhaustive-deps
     [authState.isLoggedIn],
   );
   return (

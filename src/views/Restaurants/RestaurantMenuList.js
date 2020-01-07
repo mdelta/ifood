@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import List from '@material-ui/core/List';
-import Link from '@material-ui/core/Link';
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
@@ -34,7 +33,7 @@ RestaurantList.propTypes = {
 export default function RestaurantList(props) {
     const classes = useStyles();
     const listClasses = useListStyles();
-    const { restaurants, hasHadRestaurants, actions } = props;
+    const { restaurants } = props;
 
     return (
         <div

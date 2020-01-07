@@ -1,39 +1,44 @@
 import React from 'react';
 import { makeStyles } from "@material-ui/core/styles";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 import Link from '@material-ui/core/Link';
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
-import CardFooter from "components/Card/CardFooter.js";
+import Parallax from "components/Parallax/Parallax.js";
 
-import styles from "assets/jss/material-kit-react/views/loginPage.js";
-import image from "assets/img/bg7.jpg";
-
+import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import profile from "assets/img/icons8_info_96px.png";
 const useStyles = makeStyles(styles);
 
 export default function Legal() {
     const classes = useStyles();
+    const imageClasses = classNames(
+        //classes.imgRaised,
+        classes.imgRoundedCircle,
+        classes.imgFluid
+      );
+    const styles = {
+        backgroundColor: 'white'
+    };
 
     return (
-
-        <div
-            className={classes.pageHeader}
-            style={{
-                backgroundImage: "url(" + image + ")",
-                backgroundSize: "cover",
-                backgroundPosition: "top center"
-            }}
-        >
-            <div className={classes.container}>
-                <GridContainer justify="center">
-                    <GridItem xs={12} sm={12} md={12} >
-                        <Card className={classes}>
-                            <CardHeader color="primary" className={classes.cardHeader}>
-                                <h2>Legal</h2>
-                            </CardHeader>
-                            <CardBody>                                
+        <div>
+            <Parallax tiny filter image={require("assets/img/profile-bg.jpg")} />
+            <div className={classNames(classes.main, classes.mainRaised)}>
+                <div>
+                    <div className={classes.container}>
+                        <GridContainer justify="center">
+                            <GridItem xs={12} sm={12} md={12}>
+                                <div className={classes.profile}>
+                                    <div>
+                                        <img style={styles} src={profile} alt="..." className={imageClasses} />
+                                    </div>
+                                    <div className={classes.name}>
+                                        <h2>Legal</h2>
+                                    </div>
+                                </div>
+                                <div>
                                 <h3>Andreas Pieger</h3>
                                 <p>Liesenfelder Str. 2<br />56281 Emmelshausen<br />06747/950441</p>
                                 <p><Link color="inherit" href="mailto:ifood@vantero.de">ifood@vantero.de</Link></p>
@@ -48,14 +53,12 @@ export default function Legal() {
                                 <p>A visit to our website can result in the storage on our server of information about the access (date, time, page accessed). This does not represent any analysis of personal data (e.g., name, address or e-mail address). If personal data are collected, this only occurs – to the extent possible – with the prior consent of the user of the website. Any forwarding of the data to third parties without the express consent of the user shall not take place.</p>
                                 <p>We would like to expressly point out that the transmission of data via the Internet (e.g., by e-mail) can offer security vulnerabilities. It is therefore impossible to safeguard the data completely against access by third parties. We cannot assume any liability for damages arising as a result of such security vulnerabilities.</p>
                                 <p>The use by third parties of all published contact details for the purpose of advertising is expressly excluded. We reserve the right to take legal steps in the case of the unsolicited sending of advertising information; e.g., by means of spam mail.</p>
-                            </CardBody>
-                            <CardFooter className={classes.cardFooter}>
-                            </CardFooter>
-                        </Card>
-                    </GridItem>
-                </GridContainer>
+                                </div>
+                            </GridItem>
+                        </GridContainer>
+                    </div>
+                </div>
             </div>
         </div>
-
     );
 }

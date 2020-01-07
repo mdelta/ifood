@@ -8,11 +8,19 @@ import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
-import profile from "assets/img/question_field.png";
+import profile from "assets/img/icons8_section_96px.png";
 const useStyles = makeStyles(styles);
 
 export default function Privacy() {
     const classes = useStyles();
+    const imageClasses = classNames(
+        //classes.imgRaised,
+        classes.imgRoundedCircle,
+        classes.imgFluid
+      );
+    const styles = {
+        backgroundColor: 'white'
+    };
 
     return (
         <div>
@@ -24,7 +32,7 @@ export default function Privacy() {
                             <GridItem xs={12} sm={12} md={12}>
                                 <div className={classes.profile}>
                                     <div>
-                                        <img src={profile} alt="..." className={classes.imgFluid} />
+                                        <img style={styles} src={profile} alt="..." className={imageClasses} />
                                     </div>
                                     <div className={classes.name}>
                                         <h2>Privacy policy</h2>

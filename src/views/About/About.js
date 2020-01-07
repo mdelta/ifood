@@ -31,7 +31,7 @@ export default function About() {
                     <GridItem xs={12} sm={12} md={12} >
                         <Card className={classes}>
                             <CardHeader color="primary" className={classes.cardHeader}>
-                                <h2>About iFood</h2>
+                                <h2>About iFood App</h2>
                             </CardHeader>
                             <CardBody>                                
                                 <p>

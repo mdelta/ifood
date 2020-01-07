@@ -154,13 +154,13 @@ class ButtonAppBar extends React.Component {
                         {menu}
                     </div>
                 </Drawer>
-                <AppBar position="static">
+                <AppBar color="primary" position="static">
                     <Toolbar>
                         <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.toggleDrawer('left', true)}>
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" color="inherit" className={classes.grow}>
-                            iFood
+                            iFood App
                         </Typography>
                         {this.props.loginStatus &&
                             <div>

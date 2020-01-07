@@ -1,4 +1,8 @@
 # iFood
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mdelta/ifood/Node%20CI)
+![GitHub issues by-label](https://img.shields.io/github/issues/mdelta/ifood/bug)
+![GitHub](https://img.shields.io/github/license/mdelta/ifood)
+
 The *new* "ESSEN400" or **iFood** is a web-based application using [ReactJS](https://reactjs.org/) and [MongoDB Atlas](https://cloud.mongodb.com/) with a [MongoDB Stitch](https://docs.mongodb.com/stitch/) backend. Our plan is to replace the old IBM i tool.
 
 The features will include:

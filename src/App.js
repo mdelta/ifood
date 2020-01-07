@@ -6,7 +6,6 @@ import './index.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-library.add(fab)
 
 import ButtonAppBar from './components/ButtonAppBar/ButtonAppBar'
 import LoginPage from './views/LoginPage/LoginPage';
@@ -14,11 +13,14 @@ import Legal from './views/Legal/Legal';
 import About from './views/About/About';
 import Privacy from './views/Privacy/Privacy';
 
+library.add(fab)
+
 export default function App() {
     const {
         isLoggedIn,
         actions: { handleLogout },
     } = useStitchAuth();
+    const { currentUser } = useStitchAuth();
     return (
         <div>
             <ButtonAppBar loginStatus={isLoggedIn} logout={handleLogout} />
@@ -33,7 +35,7 @@ export default function App() {
                     <Privacy />
                 </Route>
                 <Route>
-                    {isLoggedIn ? <Routes /> : <LoginPage />}
+                    {isLoggedIn ? <Routes currentUser={currentUser} /> : <LoginPage />}
                 </Route>
             </Switch>
         </div>

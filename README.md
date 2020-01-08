@@ -1,5 +1,6 @@
 # iFood
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mdelta/ifood/Node%20CI)
+[![DeepScan grade](https://deepscan.io/api/teams/6656/projects/8691/branches/109057/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=6656&pid=8691&bid=109057)
 ![GitHub issues by-label](https://img.shields.io/github/issues/mdelta/ifood/bug)
 ![GitHub](https://img.shields.io/github/license/mdelta/ifood)
 

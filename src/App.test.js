@@ -3,7 +3,6 @@ import App from './App';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from "react-router-dom";
 import { StitchAuthProvider } from "components/Auth/StitchAuth";
-import * as serviceWorker from './serviceWorker';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -12,7 +11,7 @@ import './index.css';
 library.add(fab)
 
 test('renders app', () => {
-  const { getByText } = render(
+  render(
     <StitchAuthProvider>
       <Router>
         <App />

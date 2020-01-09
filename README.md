@@ -1,7 +1,8 @@
 # iFood
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mdelta/ifood/Node%20CI)
 [![DeepScan grade](https://deepscan.io/api/teams/6656/projects/8691/branches/109057/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=6656&pid=8691&bid=109057)
-![GitHub issues by-label](https://img.shields.io/github/issues/mdelta/ifood/bug)
+[![GitHub issues by-label](https://img.shields.io/github/issues/mdelta/ifood/bug)](https://github.com/mdelta/ifood/issues)
+[![Slack](https://img.shields.io/badge/slack-join-blue)](https://vanterode.slack.com/archives/CRWBJA06T)
 ![GitHub](https://img.shields.io/github/license/mdelta/ifood)
 
 The *new* "ESSEN400" or **iFood** is a web-based application using [ReactJS](https://reactjs.org/) and [MongoDB Atlas](https://cloud.mongodb.com/) with a [MongoDB Stitch](https://docs.mongodb.com/stitch/) backend. Our plan is to replace the old IBM i tool.
@@ -36,6 +37,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+## `npm test`
+Runs all test scripts with name *.test.js.
 
 ## `npm run build`
 Builds the app for production to the `build` folder.<br />

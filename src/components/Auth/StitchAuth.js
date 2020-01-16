@@ -12,7 +12,7 @@ import {
 
 // Create a React Context that lets us expose and access auth state
 // without passing props through many levels of the component tree
-const StitchAuthContext = React.createContext();
+export const StitchAuthContext = React.createContext();
 
 // Create a React Hook that lets us get data from our auth context
 export function useStitchAuth() {

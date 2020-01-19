@@ -1,43 +1,43 @@
-import React from "react";
+import React from 'react'
 // react plugin for creating date-time-picker
-import Datetime from "react-datetime";
+import Datetime from 'react-datetime'
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import Slide from "@material-ui/core/Slide";
-import IconButton from "@material-ui/core/IconButton";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogActions from "@material-ui/core/DialogActions";
-import InputLabel from "@material-ui/core/InputLabel";
-import FormControl from "@material-ui/core/FormControl";
-import Tooltip from "@material-ui/core/Tooltip";
-import Popover from "@material-ui/core/Popover";
+import { makeStyles } from '@material-ui/core/styles'
+import Slide from '@material-ui/core/Slide'
+import IconButton from '@material-ui/core/IconButton'
+import Dialog from '@material-ui/core/Dialog'
+import DialogTitle from '@material-ui/core/DialogTitle'
+import DialogContent from '@material-ui/core/DialogContent'
+import DialogActions from '@material-ui/core/DialogActions'
+import InputLabel from '@material-ui/core/InputLabel'
+import FormControl from '@material-ui/core/FormControl'
+import Tooltip from '@material-ui/core/Tooltip'
+import Popover from '@material-ui/core/Popover'
 // @material-ui/icons
-import LibraryBooks from "@material-ui/icons/LibraryBooks";
-import Close from "@material-ui/icons/Close";
+import LibraryBooks from '@material-ui/icons/LibraryBooks'
+import Close from '@material-ui/icons/Close'
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+import GridContainer from 'components/Grid/GridContainer.js'
+import GridItem from 'components/Grid/GridItem.js'
+import Button from 'components/CustomButtons/Button.js'
 
-import styles from "assets/jss/material-kit-react/views/componentsSections/javascriptStyles.js";
+import styles from 'assets/jss/material-kit-react/views/componentsSections/javascriptStyles.js'
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles)
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="down" ref={ref} {...props} />;
-});
+const Transition = React.forwardRef(function Transition (props, ref) {
+  return <Slide direction='down' ref={ref} {...props} />
+})
 
-Transition.displayName = "Transition";
+Transition.displayName = 'Transition'
 
-export default function SectionJavascript() {
-  const classes = useStyles();
-  const [anchorElLeft, setAnchorElLeft] = React.useState(null);
-  const [anchorElTop, setAnchorElTop] = React.useState(null);
-  const [anchorElBottom, setAnchorElBottom] = React.useState(null);
-  const [anchorElRight, setAnchorElRight] = React.useState(null);
-  const [classicModal, setClassicModal] = React.useState(false);
+export default function SectionJavascript () {
+  const classes = useStyles()
+  const [anchorElLeft, setAnchorElLeft] = React.useState(null)
+  const [anchorElTop, setAnchorElTop] = React.useState(null)
+  const [anchorElBottom, setAnchorElBottom] = React.useState(null)
+  const [anchorElRight, setAnchorElRight] = React.useState(null)
+  const [classicModal, setClassicModal] = React.useState(false)
   return (
     <div className={classes.section}>
       <div className={classes.container}>
@@ -52,7 +52,7 @@ export default function SectionJavascript() {
             <GridContainer>
               <GridItem xs={12} sm={12} md={6} lg={4}>
                 <Button
-                  color="primary"
+                  color='primary'
                   block
                   onClick={() => setClassicModal(true)}
                 >
@@ -68,19 +68,19 @@ export default function SectionJavascript() {
                   TransitionComponent={Transition}
                   keepMounted
                   onClose={() => setClassicModal(false)}
-                  aria-labelledby="classic-modal-slide-title"
-                  aria-describedby="classic-modal-slide-description"
+                  aria-labelledby='classic-modal-slide-title'
+                  aria-describedby='classic-modal-slide-description'
                 >
                   <DialogTitle
-                    id="classic-modal-slide-title"
+                    id='classic-modal-slide-title'
                     disableTypography
                     className={classes.modalHeader}
                   >
                     <IconButton
                       className={classes.modalCloseButton}
-                      key="close"
-                      aria-label="Close"
-                      color="inherit"
+                      key='close'
+                      aria-label='Close'
+                      color='inherit'
                       onClick={() => setClassicModal(false)}
                     >
                       <Close className={classes.modalClose} />
@@ -88,7 +88,7 @@ export default function SectionJavascript() {
                     <h4 className={classes.modalTitle}>Modal title</h4>
                   </DialogTitle>
                   <DialogContent
-                    id="classic-modal-slide-description"
+                    id='classic-modal-slide-description'
                     className={classes.modalBody}
                   >
                     <p>
@@ -106,12 +106,12 @@ export default function SectionJavascript() {
                     </p>
                   </DialogContent>
                   <DialogActions className={classes.modalFooter}>
-                    <Button color="transparent" simple>
+                    <Button color='transparent' simple>
                       Nice Button
                     </Button>
                     <Button
                       onClick={() => setClassicModal(false)}
-                      color="danger"
+                      color='danger'
                       simple
                     >
                       Close
@@ -132,7 +132,7 @@ export default function SectionJavascript() {
                   <br />
                   <FormControl fullWidth>
                     <Datetime
-                      inputProps={{ placeholder: "Datetime Picker Here" }}
+                      inputProps={{ placeholder: 'Datetime Picker Here' }}
                     />
                   </FormControl>
                 </GridItem>
@@ -154,12 +154,12 @@ export default function SectionJavascript() {
               anchorEl={anchorElLeft}
               onClose={() => setAnchorElLeft(null)}
               anchorOrigin={{
-                vertical: "center",
-                horizontal: "left"
+                vertical: 'center',
+                horizontal: 'left'
               }}
               transformOrigin={{
-                vertical: "center",
-                horizontal: "right"
+                vertical: 'center',
+                horizontal: 'right'
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on left</h3>
@@ -179,12 +179,12 @@ export default function SectionJavascript() {
               anchorEl={anchorElTop}
               onClose={() => setAnchorElTop(null)}
               anchorOrigin={{
-                vertical: "top",
-                horizontal: "center"
+                vertical: 'top',
+                horizontal: 'center'
               }}
               transformOrigin={{
-                vertical: "bottom",
-                horizontal: "center"
+                vertical: 'bottom',
+                horizontal: 'center'
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on top</h3>
@@ -203,12 +203,12 @@ export default function SectionJavascript() {
               anchorEl={anchorElBottom}
               onClose={() => setAnchorElBottom(null)}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "center"
+                vertical: 'bottom',
+                horizontal: 'center'
               }}
               transformOrigin={{
-                vertical: "top",
-                horizontal: "center"
+                vertical: 'top',
+                horizontal: 'center'
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on bottom</h3>
@@ -227,12 +227,12 @@ export default function SectionJavascript() {
               anchorEl={anchorElRight}
               onClose={() => setAnchorElRight(null)}
               anchorOrigin={{
-                vertical: "center",
-                horizontal: "right"
+                vertical: 'center',
+                horizontal: 'right'
               }}
               transformOrigin={{
-                vertical: "center",
-                horizontal: "left"
+                vertical: 'center',
+                horizontal: 'left'
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on right</h3>
@@ -246,33 +246,33 @@ export default function SectionJavascript() {
               <h3>Tooltips</h3>
             </div>
             <Tooltip
-              id="tooltip-left"
-              title="Tooltip on left"
-              placement="left"
+              id='tooltip-left'
+              title='Tooltip on left'
+              placement='left'
               classes={{ tooltip: classes.tooltip }}
             >
               <Button>On left</Button>
             </Tooltip>
             <Tooltip
-              id="tooltip-top"
-              title="Tooltip on top"
-              placement="top"
+              id='tooltip-top'
+              title='Tooltip on top'
+              placement='top'
               classes={{ tooltip: classes.tooltip }}
             >
               <Button>On top</Button>
             </Tooltip>
             <Tooltip
-              id="tooltip-bottom"
-              title="Tooltip on bottom"
-              placement="bottom"
+              id='tooltip-bottom'
+              title='Tooltip on bottom'
+              placement='bottom'
               classes={{ tooltip: classes.tooltip }}
             >
               <Button>On bottom</Button>
             </Tooltip>
             <Tooltip
-              id="tooltip-right"
-              title="Tooltip on right"
-              placement="right"
+              id='tooltip-right'
+              title='Tooltip on right'
+              placement='right'
               classes={{ tooltip: classes.tooltip }}
             >
               <Button>On right</Button>
@@ -284,5 +284,5 @@ export default function SectionJavascript() {
         </div>
       </div>
     </div>
-  );
+  )
 }

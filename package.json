@@ -9,7 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
-    "@sentry/browser": "^5.11.0",
+    "@sentry/browser": "^5.11.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
@@ -17,7 +17,7 @@
     "history": "4.9.0",
     "moment": "2.24.0",
     "mongodb-stitch-browser-sdk": "^4.8.0",
-    "node-sass": "4.12.0",
+    "node-sass": "^4.13.1",
     "nouislider": "14.0.2",
     "prop-types": "15.7.2",
     "react": "^16.12.0",
@@ -38,7 +38,8 @@
     "eslint-plugin-react": "7.14.3",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "standard": "^14.3.1"
   },
   "optionalDependencies": {
     "typescript": "3.5.3"

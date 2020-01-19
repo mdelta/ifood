@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react'
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles'
 
 // @material-ui/icons
-import Face from "@material-ui/icons/Face";
-import Chat from "@material-ui/icons/Chat";
-import Build from "@material-ui/icons/Build";
+import Face from '@material-ui/icons/Face'
+import Chat from '@material-ui/icons/Chat'
+import Build from '@material-ui/icons/Build'
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import CustomTabs from "components/CustomTabs/CustomTabs.js";
+import GridContainer from 'components/Grid/GridContainer.js'
+import GridItem from 'components/Grid/GridItem.js'
+import CustomTabs from 'components/CustomTabs/CustomTabs.js'
 
-import styles from "assets/jss/material-kit-react/views/componentsSections/tabsStyle.js";
+import styles from 'assets/jss/material-kit-react/views/componentsSections/tabsStyle.js'
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles)
 
-export default function SectionTabs() {
-  const classes = useStyles();
+export default function SectionTabs () {
+  const classes = useStyles()
   return (
     <div className={classes.section}>
       <div className={classes.container}>
-        <div id="nav-tabs">
+        <div id='nav-tabs'>
           <h3>Navigation Tabs</h3>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -28,10 +28,10 @@ export default function SectionTabs() {
                 <small>Tabs with Icons on Card</small>
               </h3>
               <CustomTabs
-                headerColor="primary"
+                headerColor='primary'
                 tabs={[
                   {
-                    tabName: "Profile",
+                    tabName: 'Profile',
                     tabIcon: Face,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -47,7 +47,7 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Messages",
+                    tabName: 'Messages',
                     tabIcon: Chat,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -63,7 +63,7 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Settings",
+                    tabName: 'Settings',
                     tabIcon: Build,
                     tabContent: (
                       <p className={classes.textCenter}>
@@ -87,10 +87,10 @@ export default function SectionTabs() {
               </h3>
               <CustomTabs
                 plainTabs
-                headerColor="danger"
+                headerColor='danger'
                 tabs={[
                   {
-                    tabName: "Home",
+                    tabName: 'Home',
                     tabContent: (
                       <p className={classes.textCenter}>
                         I think that’s a responsibility that I have, to push
@@ -105,7 +105,7 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Updates",
+                    tabName: 'Updates',
                     tabContent: (
                       <p className={classes.textCenter}>
                         I think that’s a responsibility that I have, to push
@@ -120,7 +120,7 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "History",
+                    tabName: 'History',
                     tabContent: (
                       <p className={classes.textCenter}>
                         think that’s a responsibility that I have, to push
@@ -141,5 +141,5 @@ export default function SectionTabs() {
         </div>
       </div>
     </div>
-  );
+  )
 }

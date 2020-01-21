@@ -15,12 +15,12 @@ import background from 'assets/img/bg7.jpg'
 class App extends Component {
   componentDidMount () {
     // change background image in case the components do not fill everything
-    document.body.style.backgroundImage = 'url(' + background + ')';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundPosition = 'center';
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.height = '100% ';
-    document.documentElement.style.height = '100% ';
+    document.body.style.backgroundImage = 'url(' + background + ')'
+    document.body.style.backgroundRepeat = 'no-repeat'
+    document.body.style.backgroundPosition = 'center'
+    document.body.style.backgroundSize = 'cover'
+    document.body.style.height = '100% '
+    document.documentElement.style.height = '100% '
   }
 
   render () {

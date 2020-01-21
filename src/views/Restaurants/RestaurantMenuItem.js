@@ -14,7 +14,7 @@ import CallIcon from '@material-ui/icons/Call'
 class RestaurantItem extends Component {
   render () {
     let menuIcon
-    let telphone
+    let telPhone
 
     if (this.props.menu) {
       menuIcon =
@@ -24,9 +24,9 @@ class RestaurantItem extends Component {
     }
 
     if (this.props.phone) {
-      const tel_phone = 'tel:' + this.props.phone
-      telphone =
-        <IconButton href={tel_phone} edge='end' aria-label='call'>
+      const helpPhone = 'tel:' + this.props.phone
+      telPhone =
+        <IconButton href={helpPhone} edge='end' aria-label='call'>
           <CallIcon />
         </IconButton>
     }
@@ -44,7 +44,7 @@ class RestaurantItem extends Component {
         />
         <ListItemSecondaryAction>
           {menuIcon}
-          {telphone}
+          {telPhone}
 
         </ListItemSecondaryAction>
       </ListItem>

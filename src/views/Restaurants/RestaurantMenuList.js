@@ -44,9 +44,9 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function RestaurantList(props) {
-  const classes = useStyles();
-  const { restaurants } = props;
+export default function RestaurantList (props) {
+  const classes = useStyles()
+  const { restaurants } = props
 
   return (
     <div className={classes.root}>
@@ -67,17 +67,17 @@ export default function RestaurantList(props) {
             <CardFooter className={classes.cardFooter} />
             <Grid container spacing={3}>
               <Grid item xs={12} md={12} lg={12}>
-                  <List>
-                    {restaurants.length === 0 && <p />}
-                    {restaurants.map(restaurant => (
-                      <RestaurantMenuItem
-                        key={restaurant._id.toString()}
-                        name={restaurant.name}
-                        phone={restaurant.contact.telephone}
-                        menu={restaurant.menu}
-                      />
-                    ))}
-                  </List>
+                <List>
+                  {restaurants.length === 0 && <p />}
+                  {restaurants.map(restaurant => (
+                    <RestaurantMenuItem
+                      key={restaurant._id.toString()}
+                      name={restaurant.name}
+                      phone={restaurant.contact.telephone}
+                      menu={restaurant.menu}
+                    />
+                  ))}
+                </List>
               </Grid>
               <Grid item xs={12}>
                 <Paper className={classes.paper}>

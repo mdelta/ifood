@@ -55,23 +55,23 @@ export default function RestaurantList (props) {
               <GridItem xs={12} sm={12} md={12}>
                 <div className={classes.profile}>
                   <div>
-                      <img style={styles} src={profile} alt='...' className={imageClasses} />
-                    </div>
+                    <img style={styles} src={profile} alt='...' className={imageClasses} />
+                  </div>
                   <div className={classes.name}>
-                      <h2>Restaurants</h2>
-                    </div>
+                    <h2>Restaurants</h2>
+                  </div>
                 </div>
                 <div className={listClasses.demo}>
                   <List>
-                      {restaurants.length === 0 && <p />}
-                      {restaurants.map(restaurant => (
+                    {restaurants.length === 0 && <p />}
+                    {restaurants.map(restaurant => (
                       <RestaurantItem
                         key={restaurant._id.toString()}
                         name={restaurant.name}
                         phone={restaurant.contact.telephone}
                       />
                     ))}
-                    </List>
+                  </List>
                 </div>
               </GridItem>
             </GridContainer>

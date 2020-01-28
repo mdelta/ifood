@@ -28,7 +28,7 @@ class App extends Component {
 
     return (
       <div>
-        <ButtonAppBar loginStatus={stitch.isLoggedIn} logout={stitch.actions.handleLogout} />
+        <ButtonAppBar loginStatus={stitch.isLoggedIn} logout={stitch.actions.onLogout} />
         <Switch>
           <Route exact path='/legal'>
             <Legal />

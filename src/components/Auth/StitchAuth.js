@@ -58,7 +58,7 @@ export function StitchAuthProvider (props) {
     }
   }, [])
 
-  const handleLogin = async (provider) => {
+  const onLogin = async (provider) => {
     if (!authState.isLoggedIn) {
       switch (provider) {
         case 'google': return loginGoogle()
@@ -67,7 +67,7 @@ export function StitchAuthProvider (props) {
     }
   }
 
-  const handleLogout = async () => {
+  const onLogout = async () => {
     const { isLoggedIn } = authState
     if (isLoggedIn) {
       await logoutCurrentUser()
@@ -77,7 +77,7 @@ export function StitchAuthProvider (props) {
         currentUser: null
       })
     } else {
-      console.log('can\'t handleLogout when no user is logged in')
+      console.log('can\'t logout when no user is logged in')
     }
   }
 
@@ -88,7 +88,7 @@ export function StitchAuthProvider (props) {
       const value = {
         isLoggedIn,
         currentUser,
-        actions: { handleLogin, handleLogout }
+        actions: { onLogin, onLogout }
       }
       return value
     },

@@ -56,7 +56,7 @@ export default function LoginPage (props) {
                         justIcon
                         color='transparent'
                         provider='google'
-                        onClick={() => actions.handleLogin('google')}
+                        onClick={() => actions.onLogin('google')}
                       >
                         <FontAwesomeIcon icon={['fab', 'google']} />
                       </Button>

@@ -1,3 +1,5 @@
+/* global alert */
+
 import React from 'react'
 // nodejs library to set properties for components
 import PropTypes from 'prop-types'
@@ -26,7 +28,7 @@ export default function Pagination (props) {
         return (
           <li className={classes.paginationItem} key={key}>
             {prop.onClick !== undefined ? (
-              <Button onClick={prop.onClick} className={paginationLink}>
+              <Button onClick={prop.handleOnClick} className={paginationLink}>
                 {prop.text}
               </Button>
             ) : (
@@ -57,7 +59,7 @@ Pagination.propTypes = {
         PropTypes.number,
         PropTypes.oneOf(['PREV', 'NEXT', '...'])
       ]).isRequired,
-      onClick: PropTypes.func
+      handleOnClick: PropTypes.func
     })
   ).isRequired,
   color: PropTypes.oneOf(['primary', 'info', 'success', 'warning', 'danger'])

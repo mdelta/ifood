@@ -1,6 +1,19 @@
 {
   "name": "ifood",
   "version": "0.1.0",
+  "description": "EPG iFood ordering tool for our weekly pizza event.",
+  "homepage": "http://ifood.vantero.de",
+  "bugs": "https://github.com/mdelta/ifood/issues",
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "Andreas Pieger",
+    "email": "dev@vantero.de",
+    "url": "https://github.com/mdelta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdelta/ifood.git"
+  },
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
@@ -21,6 +34,7 @@
     "nouislider": "14.0.2",
     "prop-types": "15.7.2",
     "react": "^16.12.0",
+    "react-c3js": "^0.1.20",
     "react-datetime": "2.16.3",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -30,17 +44,23 @@
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/preset-env": "7.5.5",
-    "@babel/preset-react": "7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "dotenv": "^8.2.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.14.3",
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
+    "nodemon": "^2.0.2",
     "prettier": "1.18.2",
-    "standard": "^14.3.1"
+    "standard": "^14.3.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "optionalDependencies": {
     "typescript": "3.5.3"
@@ -48,11 +68,18 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "webpack": "webpack --config webpack.common.js",
+    "nodemon": "nodemon src/index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "browserslist": {
     "production": [

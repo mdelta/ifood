@@ -17,4 +17,11 @@ export function watchRestaurants () {
   return [getStream, closeStream]
 }
 
+export function watchOrders () {
+  const streamPromise = orders.watch()
+  const getStream = () => streamPromise
+  const closeStream = () => streamPromise.then(stream => stream.close)
+  return [getStream, closeStream]
+}
+
 export { restaurants, orders, userprofiles }

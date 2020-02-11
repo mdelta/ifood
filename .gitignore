@@ -1,9 +1,6 @@
 # Editors
 .vscode/
 
-# GiHub Actions
-.github/
-
 # Windows
 Thumbs.db
 

@@ -45,6 +45,8 @@ export default function RestaurantList (props) {
   }
   const { restaurants } = props
 
+  // TODO include route with edit, add?
+
   return (
     <div>
       <Parallax tiny filter image={require('assets/img/profile-bg.jpg')} />
